@@ -15,7 +15,7 @@ body {
     font-family: Roboto, sans-serif;
     font-size: 14px;
     letter-spacing: 0.03em;
-    outline: 2px solid tomato;
+    
 }
 
 /* основной цвет #212121*/
@@ -25,22 +25,38 @@ body {
 
 /*--Header site--*/
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
     width: 1200px;
-    background-color: blueviolet;
-    outline: 2px solid tomato;
+
+    /* background-color: blueviolet; */
+    /* outline: 2px solid tomato;  */
 }
 
 .border {
     border: 1px solid #ECECEC;
     border-top: 0;
-    background-repeat: 0;
+    border-right: 0;
     border-left: 0;
 }
 
+.nav {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
+    margin-right: 93px;
+
     color: var(--logo-color-black) font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -62,14 +78,30 @@ body {
 
 .list {
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-right: auto;
 }
 
 .site-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--primary-text-color);
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
 }
 
 .site-nav .link.current {
@@ -83,11 +115,20 @@ body {
 
 .e-mail-nav,
 .tel-nav {
+    /* display: inline; */
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--text-color);
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    text-decoration: none;
+    text-decoration: none;  
+}
+
+.e-mail-nav {
+    margin-right: 50px;
 }
 
 .e-mail-nav:hover,
@@ -100,7 +141,7 @@ body {
 /* -- Main site */
 /* Hero */
 .container.hero {
-    padding: 200px 0;
+    padding: 200px 15px;
 }
 
 .hero {
@@ -108,14 +149,15 @@ body {
 }
 
 .hero-header {
-    margin: 0;
+    margin: auto;
     margin-bottom: 30px;
+    text-align: center;
+    width: 696px;
 
     color: var(--primary-white-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
@@ -125,6 +167,7 @@ body {
     padding: 10px 32px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
+    margin: auto;
     /* border: 1px solid transparent; */
 
 
@@ -141,11 +184,16 @@ body {
     cursor: pointer;
 }
 
+/* Benefits (Переваги) */
+
 .container.main {
-    padding: 94px 0;
+    padding: 94px 15px;
 }
 
-/* Benefits (Переваги) */
+.benefits-item {
+    display: flex;
+    gap: 30px;
+}
 
 .visually-hidden {
     position: nabsolute;
@@ -185,16 +233,34 @@ body {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
-
 }
+
+.work-img {
+    display: flex;
+    gap: 30px;
+}
+
+
 
 /* Team */
 .team {
     background-color: var(--background-lightgrey)
 }
 
+.teams {
+    display: flex;
+    gap: 30px;
+}
+
+.team-border {
+    background-color: var(--primary-white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
 .team-name {
     margin: 0;
+    padding-top: 30px;
     margin-bottom: 10px;
 
     font-weight: 500;
@@ -205,6 +271,7 @@ body {
 
 .team-profession {
     margin: 0;
+    padding-bottom: 30px;
 
     color: var(--text-color);
     font-size: 16px;
@@ -213,13 +280,16 @@ body {
 }
 
 /* --Footer-- */
-.container.footer {
-    padding: 60px 0;
+
+.logotip-footer{
+    padding-top: 60px;
+    margin-bottom: 20px;
 }
 
-.logo-address {
-    margin-bottom: 20px;
-
+.logo-address,
+.logo-footer {
+    margin: 0;
+   
     color: var(--primary-white-color);
     font-family: Raleway, sans-serif;
     font-weight: 700;
@@ -230,7 +300,6 @@ body {
 
 .logo-footer {
     color: var(--accent-color);
-    margin-bottom: 20px;
 }
 
 .logo-address:hover,
@@ -242,6 +311,11 @@ body {
     background-color: var(--backgound-grey);
 }
 
+.all-adress {
+    margin: 0;
+    padding-bottom: 60px;
+}
+
 .adress-footer {
     margin-bottom: 9px;
     color: var(--primary-white-color);
@@ -249,7 +323,10 @@ body {
 
     line-height: 1.71;
     text-decoration: none;
+}
 
+.address-mail {
+    margin-bottom: 9px;
 }
 
 .adress-footer:hover,
@@ -274,10 +351,19 @@ body {
 
 /* -- Portfolio -- */
 
+.nav-button {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding-top: 94px;
+    padding-bottom: 50px;
+}
+
 .portfolio-button {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
+    border: none;
 
     background-color: var(--background-lightgrey);
     font-family: inherit;
@@ -286,26 +372,15 @@ body {
     line-height: 1.62;
     text-align: center;
     cursor: pointer;
+    padding-top: 6px;
+    padding-right: 22px;
+    padding-bottom: 6px;
+    padding-left: 22px;
 }
 
-.portfolio-button.all {
-    width: 73px;
-}
-
-.portfolio-button.web {
-    width: 125px;
-}
-
-.portfolio-button.app {
-    width: 112px;
-}
-
-.portfolio-button.design {
-    width: 103px;
-}
-
-.portfolio-button.marketing {
-    width: 130px;
+.all {
+    padding-right: 25px;
+    padding-left: 25px;
 }
 
 .portfolio-button:hover,
@@ -313,8 +388,24 @@ body {
     background-color: var(--accent-color);
 }
 
+/* -- Gallery -- */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 94px;
+}
+
+.gallery-item {
+    flex-basis: calc((100% - 60px) / 3);
+}
+
 .portfolio-title {
-    margin-top: 0;
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
     margin-bottom: 4px;
 
     font-size: 18px;
@@ -323,15 +414,18 @@ body {
 }
 
 .portfolio-tex {
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 20px;
 
     color: var(--text-color);
     font-size: 16px;
     line-height: 1.88;
 }
 
-.portfolio-border {
+.gallery-border {
+    background: var(--primary-white-color);
     border: 1px solid #EEEEEE;
     border-top: 0;
 }
