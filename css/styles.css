@@ -23,7 +23,12 @@ body {
 /* синий #2196F3 */
 /* белый #FFFFFF */
 
-/*--Header site--*/
+/* -----for all----- */
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
 img {
     display: block;
@@ -38,9 +43,11 @@ img {
     padding-right: 15px;
     width: 1200px;
 
-    /* background-color: blueviolet; */
-    /* outline: 2px solid tomato;  */
+    /* background-color: blueviolet;
+    outline: 2px solid tomato; */
 }
+
+/*--Header site--*/
 
 .border {
     border: 1px solid #ECECEC;
@@ -52,6 +59,8 @@ img {
 .nav {
     display: flex;
     align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .logo {
@@ -75,12 +84,6 @@ img {
 }
 
 /* menu nav */
-
-.list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 
 .nav-item {
     margin-right: auto;
@@ -115,7 +118,6 @@ img {
 
 .e-mail-nav,
 .tel-nav {
-    /* display: inline; */
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -140,11 +142,9 @@ img {
 
 /* -- Main site */
 /* Hero */
-.container.hero {
-    padding: 200px 15px;
-}
 
-.hero {
+.hero{
+    padding: 200px 15px;
     background-color: var(--backgound-grey)
 }
 
@@ -170,7 +170,6 @@ img {
     margin: auto;
     /* border: 1px solid transparent; */
 
-
     background-color: var(--accent-color);
     color: var(--primary-white-color);
     font-family: inherit;
@@ -186,13 +185,9 @@ img {
 
 /* Benefits (Переваги) */
 
-.container.main {
-    padding: 94px 15px;
-}
-
-.benefits-item {
-    display: flex;
-    gap: 30px;
+.benefits {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .visually-hidden {
@@ -206,6 +201,11 @@ img {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
+}
+
+.benefits-item {
+    display: flex;
+    gap: 30px;
 }
 
 .benefits-title {
@@ -225,6 +225,11 @@ img {
 }
 
 /* Work and Team title */
+
+.work {
+    padding-bottom: 94px;
+}
+
 .work-title,
 .team-title {
     margin: 0;
@@ -244,6 +249,8 @@ img {
 
 /* Team */
 .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
     background-color: var(--background-lightgrey)
 }
 
@@ -260,7 +267,6 @@ img {
 
 .team-name {
     margin: 0;
-    padding-top: 30px;
     margin-bottom: 10px;
 
     font-weight: 500;
@@ -271,7 +277,6 @@ img {
 
 .team-profession {
     margin: 0;
-    padding-bottom: 30px;
 
     color: var(--text-color);
     font-size: 16px;
@@ -279,10 +284,19 @@ img {
     text-align: center;
 }
 
+.team-text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 /* --Footer-- */
+.address {
+    background-color: var(--backgound-grey);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 
 .logotip-footer{
-    padding-top: 60px;
     margin-bottom: 20px;
 }
 
@@ -307,26 +321,12 @@ img {
     color: var(--accent-color);
 }
 
-.address {
-    background-color: var(--backgound-grey);
-}
-
-.all-adress {
-    margin: 0;
-    padding-bottom: 60px;
-}
-
 .adress-footer {
-    margin-bottom: 9px;
     color: var(--primary-white-color);
     font-style: normal;
 
     line-height: 1.71;
     text-decoration: none;
-}
-
-.address-mail {
-    margin-bottom: 9px;
 }
 
 .adress-footer:hover,
@@ -349,18 +349,27 @@ img {
     color: var(--accent-color);
 }
 
+.adress-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
 /* -- Portfolio -- */
+.portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
 .nav-button {
     display: flex;
     justify-content: center;
     gap: 8px;
-    padding-top: 94px;
-    padding-bottom: 50px;
+}
+
+.portfolio-item {
+    margin-bottom: 50px;
 }
 
 .portfolio-button {
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
     /* border: 1px solid transparent; */
     border: none;
@@ -386,6 +395,7 @@ img {
 .portfolio-button:hover,
 .portfolio-button:focus {
     background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 }
 
 /* -- Gallery -- */
@@ -394,7 +404,6 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    padding-bottom: 94px;
 }
 
 .gallery-item {
@@ -403,9 +412,6 @@ img {
 
 .portfolio-title {
     margin: 0;
-    padding-top: 20px;
-    padding-left: 24px;
-    padding-right: 24px;
     margin-bottom: 4px;
 
     font-size: 18px;
@@ -415,9 +421,6 @@ img {
 
 .portfolio-tex {
     margin: 0;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 20px;
 
     color: var(--text-color);
     font-size: 16px;
@@ -428,5 +431,9 @@ img {
     background: var(--primary-white-color);
     border: 1px solid #EEEEEE;
     border-top: 0;
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-bottom: 20px;
+    padding-right: 24px;
 }
 
