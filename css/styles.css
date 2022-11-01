@@ -369,9 +369,6 @@ img {
     display: flex;
     justify-content: center;
     gap: 8px;
-}
-
-.portfolio-item {
     margin-bottom: 50px;
 }
 
